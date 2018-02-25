@@ -8,7 +8,7 @@ function onDeviceReady() {
 
                 reader.onloadend = function (e) {
                     console.log(this.result);
-                    console.log(`Should be 30,000 lines but is ${this.result.split(/\r\n|\r|\n/).length}`);
+                    console.log(`Should be 5000 lines but is ${this.result.split(/\r\n|\r|\n/).length}`);
                     console.log(`Add breakpoint here and in type copy(this.result) to get it in your clipboard`);
                 };
 
