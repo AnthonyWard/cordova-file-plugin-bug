@@ -6,15 +6,14 @@ function onDeviceReady() {
             fileEntry.file((file) => {
                 var reader = new FileReader();
 
-                reader.onloadend = function (e) {
-                    console.log(this.result);
-                    console.log(`Should be 5000 lines but is ${this.result.split(/\r\n|\r|\n/).length}`);
+                reader.onloadend = (e) => {
+                    console.log(`Should be 10000 lines but is ${this.result.split(/\r\n|\r|\n/).length}`);
                     console.log(`Add breakpoint here and in type copy(this.result) to get it in your clipboard`);
                 };
 
                 reader.readAsText(file);
-            }, (err) => console.log(error));
-        }, (err) => console.log(error));
+            }, (err) => console.log(err));
+        }, (err) => console.log(err));
     }
 
     var fileData;
