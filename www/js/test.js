@@ -6,7 +6,7 @@ function onDeviceReady() {
             fileEntry.file((file) => {
                 var reader = new FileReader();
 
-                reader.onloadend = (e) => {
+                reader.onloadend = function(e) {
                     console.log(`Should be 10000 lines but is ${this.result.split(/\r\n|\r|\n/).length}`);
                     console.log(`Add breakpoint here and in type copy(this.result) to get it in your clipboard`);
                 };
